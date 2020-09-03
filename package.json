@@ -1,0 +1,12 @@
+{
+  "name": "yarn2-ts-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "typescript": "^4.0.2"
+  }
+}

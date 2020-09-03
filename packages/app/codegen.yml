@@ -1,0 +1,19 @@
+overwrite: true
+schema:
+  - src/**/*.schema.graphql
+require:
+  - ts-node/register
+generates:
+  src/generated/schema.ts:
+    config:
+      federation: true
+      contextType: ../shared/graphql#Context
+      defaultMapper: Partial<{T}>
+    plugins:
+      - typescript
+      - typescript-resolvers
+      - typescript-operations
+      - typescript-document-nodes
+  src/generated/schema.graphql:
+    plugins:
+      - schema-ast
